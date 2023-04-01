@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tienda_en_Linea</name>
+    </assembly>
+    <members>
+        <member name="P:Tienda_en_Linea.ViewModels.BaseViewModels.Titulo">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.BaseViewModels.titulo"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.BaseViewModels.EstaCargando">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.BaseViewModels.estaCargando"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.DetalleProductoViewModel.Producto">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.DetalleProductoViewModel.producto"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.DetalleProductoViewModel.Identificador">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.DetalleProductoViewModel.identificador"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.EstaRefrescando">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ListPorductsViewModel.estaRefrescando"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.Identificador">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ListPorductsViewModel.identificador"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.NombreProducto">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ListPorductsViewModel.nombreProducto"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.TallaProducto">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ListPorductsViewModel.tallaProducto"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.Marca">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ListPorductsViewModel.marca"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.Precio">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ListPorductsViewModel.precio"/>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ListPorductsViewModel.obtenerListaProductosCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.ObtenerListaProductosCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.ObtenerListaProductosCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ListPorductsViewModel.ObtenerListaProductos"/>.</summary>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ListPorductsViewModel.agregarProductoCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.AgregarProductoCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.AgregarProductoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ListPorductsViewModel.AgregarProducto"/>.</summary>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ListPorductsViewModel.eliminarProductoCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.EliminarProductoCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.EliminarProductoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ListPorductsViewModel.EliminarProducto(System.Int32)"/>.</summary>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ListPorductsViewModel.irADetalleProductoCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.IrADetalleProductoCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ListPorductsViewModel.IrADetalleProductoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ListPorductsViewModel.IrADetalleProducto(System.Int32)"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.UsuarioViewModel.Email">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.UsuarioViewModel.email"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.UsuarioViewModel.Password">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.UsuarioViewModel.password"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.UsuarioViewModel.Usuario">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.UsuarioViewModel.usuario"/>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.UsuarioViewModel.verificarUsuarioCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.UsuarioViewModel.VerificarUsuarioCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.UsuarioViewModel.VerificarUsuarioCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.UsuarioViewModel.VerificarUsuario"/>.</summary>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.UsuarioViewModel.crearCuentaCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.UsuarioViewModel.CrearCuentaCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.UsuarioViewModel.CrearCuentaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.UsuarioViewModel.CrearCuenta"/>.</summary>
+        </member>
+    </members>
+</doc>

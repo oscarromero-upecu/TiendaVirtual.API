@@ -1,0 +1,118 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:modelo="clr-namespace:Tienda_en_Linea.Models"
+             xmlns:viewmodel="clr-namespace:Tienda_en_Linea.ViewModels.ModeloProductos"
+             x:DataType="viewmodel:ListPorductsViewModel"
+             Title="{Binding Titulo}"
+             x:Class="Tienda_en_Linea.Views.ListadoProductoPage">
+
+        
+
+
+        <ScrollView>
+
+        <Grid ColumnSpacing="1" RowSpacing="1" >
+
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="LightBlue" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions >
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+            <Frame Grid.Row="0" BackgroundColor="white" HeightRequest="0" 
+                                       CornerRadius="20"
+                                       HasShadow="False"
+                                       Padding="1" 
+                                       Margin="40,10,40,487" 
+                                       BorderColor="white">
+                
+                <StackLayout Margin="-5,-17,0,-20" Grid.Row="0" Orientation="Horizontal">
+                    <Border HorizontalOptions="Start" BackgroundColor="Transparent">
+                        <Border.Clip>
+                            <EllipseGeometry Center="40,40" RadiusX="30" RadiusY="30"/>
+                        </Border.Clip>
+                        <Image Source="Resources/Images/lupa.png"  WidthRequest="79" HeightRequest="38"/>
+                    </Border>
+                    
+                    <Entry  Placeholder="Buscar"  Margin="-10,20,10,0"/>
+
+                </StackLayout>
+
+
+            </Frame>
+
+                <RefreshView Grid.Row="4"
+                     Command="{Binding ObtenerListaProductosCommand}"
+                     IsRefreshing="{Binding EstaRefrescando}">
+
+                    <CollectionView ItemsSource="{Binding Productos}" SelectionMode="None">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Span="2"
+                                         Orientation="Vertical"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="modelo:Producto">
+
+                                <Grid RowDefinitions="170,*"
+                                 Padding="12"  >
+
+                                    <Frame HeightRequest="180" 
+                                       CornerRadius="20"
+                                       HasShadow="False"
+                                       Padding="4" 
+                                       Margin="0,5,0,0" 
+                                       Grid.Row="1"
+                                       Background="white"
+                                           BorderColor="Transparent">
+
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ListPorductsViewModel}}, Path=IrADetalleProductoCommand }"
+                                                          CommandParameter="{Binding Id}"/>
+                                        </Frame.GestureRecognizers>
+
+                                        <StackLayout Margin="0,40,0,30" 
+                                                 Orientation="Vertical"
+                                                 Padding="1"
+                                                 HorizontalOptions="CenterAndExpand">
+
+                                            <Label Text="{Binding NombreProducto}" FontAttributes="Bold" FontSize="20" TextColor="Black"/>
+                                            <Label Text="{Binding Marca}" TextColor="#949494" HorizontalOptions="Center"/>
+                                            <Label Text="{Binding Precio}" TextColor="#FF9B63" FontSize="23" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                        </StackLayout>
+
+                                    </Frame>
+
+                                <StackLayout Margin="0,30,0,0" Padding="2" >
+                                        <Border>
+                                            <Border.Clip>
+                                                <EllipseGeometry Center="90,100" RadiusX="75" RadiusY="78" />
+                                            </Border.Clip>
+                                            <Image Source="{Binding Foto}"  WidthRequest="150" HeightRequest="200" HorizontalOptions="Center"/>
+                                        </Border>
+                                    </StackLayout>
+
+                                    <VerticalStackLayout Grid.Row="1" Padding="20" Margin="0,120,0,0">
+                                        <Button Text="Detalle" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ListPorductsViewModel}}, Path=IrADetalleProductoCommand }"
+                                                          CommandParameter="{Binding Id}"
+                                                            Margin="2" 
+                                                            Background="#4D4D4D" 
+                                                            TextColor="White"/>
+                                    </VerticalStackLayout>
+
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </RefreshView>
+            </Grid>
+        </ScrollView>
+</ContentPage>

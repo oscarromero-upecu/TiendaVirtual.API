@@ -1,0 +1,51 @@
+<Shell
+    x:Class="Tienda_en_Linea.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vista="clr-namespace:Tienda_en_Linea.Views"
+    xmlns:vistaLogin="clr-namespace:Tienda_en_Linea.Views.Login_Sesion"
+    xmlns:vistaAdmin="clr-namespace:Tienda_en_Linea.Views.Admin"
+    xmlns:vistaUser="clr-namespace:Tienda_en_Linea.Views.User"
+    Shell.FlyoutBehavior="Flyout">
+    
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate vistaLogin:InicioPage}"
+        Route="InicioPage" />
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate vista:ListadoProductoPage}"
+        Route="ListadoProductoPage" />
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate vistaLogin:LoginPage}"
+        Route="LoginPage" />
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate vistaLogin:CrearCuentaPage}"
+        Route="CrearCuentaPage" />
+
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate vistaAdmin:AgregarProductoAdminPage}"
+        Route="AgregarProductoAdminPage" />
+    
+    <ShellContent
+        
+        Title="Home"
+        ContentTemplate="{DataTemplate vistaUser:DetalleProductoUserPage}"
+        Route="DetalleProductoUserPage" />
+    
+    
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate vistaLogin:CerrarSesionPage}"
+        Route="CerrarSesionPage" />
+
+</Shell>

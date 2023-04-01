@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tienda</name>
+    </assembly>
+    <members>
+        <member name="P:Tienda_en_Linea.ViewModels.BaseViewModels.Titulo">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.BaseViewModels.titulo"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.BaseViewModels.EstaCargando">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.BaseViewModels.estaCargando"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.Articulo">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.articulo"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.Identificador">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.identificador"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.EstaHabiltado">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.estaHabiltado"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.Carrito">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.carrito"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.NombreProducto">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.nombreProducto"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.Marca">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.marca"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.Precio">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.precio"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.Foto">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.foto"/>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.editarProductoCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.EditarProductoCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.EditarProductoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.EditarProducto(System.Int32)"/>.</summary>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.eliminarProductoCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.EliminarProductoCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.EliminarProductoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.EliminarProducto(System.Int32)"/>.</summary>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.agregarProductoCarritoCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.AgregarProductoCarritoCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.AgregarProductoCarritoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.AgregarProductoCarrito"/>.</summary>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.irAListadoProductosCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.IrAListadoProductosCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.IrAListadoProductosCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.IrAListadoProductos(System.Int32)"/>.</summary>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.hailitarEntryCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.HailitarEntryCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.HailitarEntryCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ModeloProductos.DetalleProductoViewModel.HailitarEntry"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.EstaRefrescando">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.estaRefrescando"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.Identificador">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.identificador"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.NombreProducto">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.nombreProducto"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.Marca">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.marca"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.Precio">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.precio"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.Foto">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.foto"/>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.obtenerListaProductosCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.ObtenerListaProductosCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.ObtenerListaProductosCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.ObtenerListaProductos"/>.</summary>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.agregarProductoCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.AgregarProductoCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.AgregarProductoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.AgregarProducto"/>.</summary>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.irADetalleProductoCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.IrADetalleProductoCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.IrADetalleProductoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ModeloProductos.ListPorductsViewModel.IrADetalleProducto(System.Int32)"/>.</summary>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ModeloUsuario.CerrarSesionViewModel.cerrarSesionCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ModeloUsuario.CerrarSesionViewModel.CerrarSesionCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloUsuario.CerrarSesionViewModel.CerrarSesionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ModeloUsuario.CerrarSesionViewModel.CerrarSesion"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloUsuario.CrearCuentaViewModel.Correo">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloUsuario.CrearCuentaViewModel.correo"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloUsuario.CrearCuentaViewModel.Password">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloUsuario.CrearCuentaViewModel.password"/>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ModeloUsuario.CrearCuentaViewModel.crearCuentaCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ModeloUsuario.CrearCuentaViewModel.CrearCuentaCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloUsuario.CrearCuentaViewModel.CrearCuentaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ModeloUsuario.CrearCuentaViewModel.CrearCuenta"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloUsuario.LoginViewModel.Correo">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloUsuario.LoginViewModel.correo"/>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloUsuario.LoginViewModel.Clave">
+            <inheritdoc cref="F:Tienda_en_Linea.ViewModels.ModeloUsuario.LoginViewModel.clave"/>
+        </member>
+        <member name="F:Tienda_en_Linea.ViewModels.ModeloUsuario.LoginViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:Tienda_en_Linea.ViewModels.ModeloUsuario.LoginViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:Tienda_en_Linea.ViewModels.ModeloUsuario.LoginViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Tienda_en_Linea.ViewModels.ModeloUsuario.LoginViewModel.Login"/>.</summary>
+        </member>
+    </members>
+</doc>

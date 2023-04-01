@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Tienda_en_Linea.ViewModels.ModeloProductos"
+             x:DataType="viewmodel:DetalleProductoViewModel"
+             x:Class="Tienda_en_Linea.Views.Admin.DetalleProductoAdminPage"
+             Title="{Binding Titulo}">
+
+    <VerticalStackLayout 
+          Padding="1"  >
+        <VerticalStackLayout.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="LightBlue" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </VerticalStackLayout.Background>
+        
+        <StackLayout Margin="90,10,90,-10" Grid.Row="0" VerticalOptions="Center">
+            
+                <Image Source="{Binding Articulo.Foto}"  WidthRequest="250" HeightRequest="180" HorizontalOptions="Center"/>
+
+        </StackLayout>
+        <Frame HeightRequest="120" 
+               HasShadow="False"
+               Padding="20" 
+               Margin="0,25,0,50" 
+               BorderColor="Transparent"
+               BackgroundColor="Transparent">
+
+            <StackLayout Margin="0,-25,0,0" 
+                             Orientation="Vertical"
+                             Padding="1"
+                             HorizontalOptions="CenterAndExpand">
+
+                <Label Text="{Binding Articulo.NombreProducto}" FontAttributes="Bold" FontSize="20" TextColor="Black"/>
+                <Label Text="{Binding Articulo.Marca}" TextColor="#949494" HorizontalOptions="Center"/>
+                <Label Text="{Binding Articulo.Precio}" TextColor="#FF9B63" FontSize="23" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+        </Frame>
+        
+        <StackLayout Margin="-100,-80,10,0">
+            <VerticalStackLayout  Padding="0" Margin="-200,-20,0,0" HorizontalOptions="Center">
+
+                <Button Text="Editar" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DetalleProductoViewModel}}, Path=HailitarEntryCommand}"
+                                        CommandParameter="{Binding Identificador}" Background="#4285F4" />
+            </VerticalStackLayout>
+        </StackLayout>
+        
+        <VerticalStackLayout Margin="0,-20,0,0" Padding="20">
+
+            <Entry x:Name="NombreProducto" Placeholder="Nombre producto" Text="{Binding NombreProducto}" IsEnabled="{Binding EstaHabiltado}" />
+            <Entry x:Name="Marca" Placeholder="Marca" Text="{Binding Marca}" IsEnabled="{Binding EstaHabiltado}" />
+            <Entry x:Name="Precio" Placeholder="Precio" Text="{Binding Precio}" IsEnabled="{Binding EstaHabiltado}"/>
+            <Entry x:Name="Foto" Placeholder="Foto" Text="{Binding Foto}" IsEnabled="{Binding EstaHabiltado}" />
+            
+        </VerticalStackLayout>
+        
+        <StackLayout Margin="0,-40,0,0">
+            <HorizontalStackLayout  Padding="5" Margin="0,0,0,0" >
+                
+                <Button Text="Actualizar" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DetalleProductoViewModel}}, Path=EditarProductoCommand}"
+                                        CommandParameter="{Binding Identificador}" Margin="20" Background="#11C29F" />
+                
+                <Button Text="Eliminar producto" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DetalleProductoViewModel}}, Path=EliminarProductoCommand }"
+                                        CommandParameter="{Binding Identificador}" Margin="20" Background="#9C3D77" />
+            </HorizontalStackLayout>
+        </StackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>

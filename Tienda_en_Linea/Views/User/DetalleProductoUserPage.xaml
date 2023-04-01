@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Tienda_en_Linea.ViewModels.ModeloProductos"
+             x:DataType="viewmodel:DetalleProductoViewModel"
+             x:Class="Tienda_en_Linea.Views.User.DetalleProductoUserPage"
+             Title="{Binding Titulo}">
+
+    <VerticalStackLayout 
+          Padding="20"  >
+
+        <VerticalStackLayout.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="LightBlue" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </VerticalStackLayout.Background>
+
+        <StackLayout Margin="90,10,90,-10" Grid.Row="0" VerticalOptions="Center" >
+
+            <Image Source="{Binding Articulo.Foto}"  WidthRequest="250" HeightRequest="200" HorizontalOptions="Center" />
+
+        </StackLayout>
+        <Frame HeightRequest="120" 
+               HasShadow="False"
+               Padding="2" 
+               Margin="0,35,0,0" 
+               BorderColor="Transparent"
+               BackgroundColor="Transparent">
+
+            <StackLayout Margin="0,25,0,0" 
+                             Orientation="Vertical"
+                             Padding="4"
+                             HorizontalOptions="CenterAndExpand">
+
+                <Label Text="{Binding Articulo.NombreProducto}" FontAttributes="Bold" FontSize="20" TextColor="Black"/>
+                <Label Text="{Binding Articulo.Marca}" TextColor="#949494" HorizontalOptions="Center"/>
+                <Label Text="{Binding Articulo.Precio}" TextColor="#FF9B63" FontSize="23" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+        </Frame>
+       
+        <StackLayout Margin="0,40,0,0">
+            <VerticalStackLayout  Padding="5" Margin="0,0,0,0" >
+                
+                <Button Text="Agregar a Carrito" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DetalleProductoViewModel}}, Path=AgregarProductoCarritoCommand}"
+                                        CommandParameter="{Binding Carrito}" Margin="10" Background="#11C29F" />
+                <Button Text="Regresar" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DetalleProductoViewModel}}, Path=IrAListadoProductosCommand }"
+                                        CommandParameter="{Binding Identificador}" Margin="10" Background="#0C7B93" />
+            </VerticalStackLayout>
+        </StackLayout>
+
+
+
+
+
+
+
+
+    </VerticalStackLayout>
+
+</ContentPage>

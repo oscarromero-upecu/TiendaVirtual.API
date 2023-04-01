@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Tienda_en_Linea.ViewModels.ModeloUsuario"
+             x:DataType="viewmodel:InicioViewModel"
+             x:Class="Tienda_en_Linea.Views.Login_Sesion.InicioPage"
+             Shell.NavBarIsVisible="false">
+    
+    <VerticalStackLayout VerticalOptions="Center">
+        
+        <ActivityIndicator x:Name="spinner"
+                           IsRunning="{Binding EstaCargando}"
+                           Color="Green" 
+                           WidthRequest="100" 
+                           HeightRequest="100"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand" />
+        <Label 
+            Text="Inicializando...."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

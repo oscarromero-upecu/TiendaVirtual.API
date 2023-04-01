@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\apitienda</_PublishTargetUrl>
+    <History>True|2023-03-31T07:14:44.3682746Z;True|2023-03-30T15:14:30.6389146-05:00;True|2023-03-28T21:48:20.5283181-05:00;True|2023-03-28T21:36:02.7924251-05:00;True|2023-03-28T19:16:31.0769395-05:00;True|2023-03-28T17:53:56.0181128-05:00;True|2023-03-19T20:53:04.7184430-05:00;True|2023-03-10T03:16:34.7789211-05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,96 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Tienda_en_Linea.ViewModels.ModeloUsuario"
+             x:DataType="viewmodel:LoginViewModel"
+             x:Class="Tienda_en_Linea.Views.Login_Sesion.LoginPage"
+             Shell.NavBarIsVisible="False"
+             Title="Login Tienda">
+    
+    
+    <Grid RowDefinitions="1*,8*,1*">
+
+        <Frame BackgroundColor="#0C7B93"
+            Grid.Row="0" 
+            HorizontalOptions="EndAndExpand"
+            Padding="0" 
+            Margin="1200,-80,-80,0"
+            HeightRequest="250" 
+            WidthRequest="250" 
+            CornerRadius="125">            
+        </Frame>
+        
+        <Frame BackgroundColor="{x:StaticResource ColorBoton}"
+            Grid.Row="0" 
+            HorizontalOptions="EndAndExpand"
+            Padding="0" 
+            Margin="1200,-100,-120,0"
+            HeightRequest="250" 
+            WidthRequest="250" 
+            CornerRadius="125">
+        </Frame>
+
+        <Frame BackgroundColor="{x:StaticResource Fondologin}" 
+               Grid.Row="1" 
+               VerticalOptions="CenterAndExpand"
+               Margin="50,60,50,60">
+
+            <VerticalStackLayout Spacing="20" Margin="0,0,0,-2">
+                <Label Text="INICIO DE SESION" FontSize="20" FontAttributes="Bold"/>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="arroba.png" HeightRequest="25" WidthRequest="25"/>
+                        <Entry x:Name="Email" Text="{Binding Correo}" VerticalOptions="Center" Placeholder="Email" Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10"  BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="password.png" HeightRequest="25" WidthRequest="25"/>
+                        <Entry x:Name="Password" IsPassword="True" Text="{Binding Clave}" VerticalOptions="Center" Placeholder="Password" Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+
+                <Button Command="{Binding LoginCommand}"
+                    Margin="9"
+                    Text="INGRESAR" FontSize="20" FontAttributes="Bold" />
+
+                <Label Text="Olvidaste tu password?" TextColor="Gray" HorizontalTextAlignment="Center"/>
+
+                <HorizontalStackLayout  Spacing="20" HorizontalOptions="Center">
+                    <Label  FontAttributes="Bold" TextColor="Gray" Text="No tienes cuenta?  " VerticalTextAlignment="Center"/>
+                    <Label Text="CREAR CUENTA" FontSize="18" FontAttributes="Bold" 
+                           TextColor="{x:StaticResource Primary}"/>
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Para_CrearCuenta"/>
+                    </HorizontalStackLayout.GestureRecognizers>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            
+        </Frame>
+
+
+        <Frame BackgroundColor="#0C7B93"
+            Grid.Row="2" 
+            VerticalOptions="EndAndExpand"
+            HorizontalOptions="StartAndExpand"
+            Padding="0" 
+             Margin="-100,80,1200,-120"
+            HeightRequest="250" 
+            WidthRequest="250" 
+            CornerRadius="125">
+        </Frame>
+
+        <Frame BackgroundColor="{x:StaticResource ColorBoton}"
+            Grid.Row="2" 
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="StartAndExpand"
+            Padding="0" 
+            Margin="-100,-30,1200,40"
+            HeightRequest="250" 
+            WidthRequest="250" 
+            CornerRadius="125">
+        </Frame>
+
+
+    </Grid>
+</ContentPage>

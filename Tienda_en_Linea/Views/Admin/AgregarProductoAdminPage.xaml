@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Tienda_en_Linea.ViewModels.ModeloProductos"
+             x:DataType="viewmodel:ListPorductsViewModel"
+             x:Class="Tienda_en_Linea.Views.Admin.AgregarProductoAdminPage"
+             Title="Agregar nuevo producto">
+
+
+    <Grid RowDefinitions="1*,8*,1*" >
+
+        <Grid.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="LightBlue" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+        </Grid.Background>
+
+
+        <Frame BackgroundColor="{x:StaticResource Fondologin}"
+            Grid.Row="0" 
+            HorizontalOptions="EndAndExpand"
+            Padding="0" 
+            Margin="1200,-80,-80,0"
+            HeightRequest="250" 
+            WidthRequest="250" 
+            CornerRadius="125">
+            
+          
+        </Frame>
+
+        <Frame BackgroundColor="{x:StaticResource ColorBoton}"
+            Grid.Row="0" 
+            HorizontalOptions="EndAndExpand"
+            Padding="0" 
+            Margin="1200,-100,-120,0"
+            HeightRequest="250" 
+            WidthRequest="250" 
+            CornerRadius="125">
+        </Frame>
+
+        <Frame  BackgroundColor="Transparent" 
+                BorderColor="Transparent"
+               Grid.Row="1" 
+               VerticalOptions="CenterAndExpand"
+               Margin="10,60,10,0">
+            
+            <VerticalStackLayout 
+                Padding="1"  >
+
+                
+                <Frame HeightRequest="70" 
+               HasShadow="False"
+               Padding="20" 
+               Margin="0,0,0,70" 
+               BorderColor="DarkGray"
+                       BackgroundColor="Transparent">
+
+                    <StackLayout Margin="0,0,0,0" 
+                             Orientation="Vertical"
+                             Padding="1"
+                             HorizontalOptions="Center"
+                                >
+
+                        <Label Text="Nuevo producto" FontAttributes="Bold" FontSize="20" TextColor="#427DE5"/>
+                    </StackLayout>
+
+                </Frame>
+
+               <VerticalStackLayout Margin="0,-80,0,0" Padding="20">
+
+                    <Entry x:Name="NombreProducto" Placeholder="Nombre producto" Text="{Binding NombreProducto}"/>
+                    <Entry x:Name="Marca" Placeholder="Marca" Text="{Binding Marca}" />
+                    <Entry x:Name="Precio" Placeholder="Precio" Text="{Binding Precio}"/>
+                    <Entry x:Name="Foto" Placeholder="Url Foto" Text="{Binding Foto}"/>
+
+                </VerticalStackLayout>
+
+
+            </VerticalStackLayout>
+
+        </Frame>
+
+        <Frame Grid.Row="2"
+               BackgroundColor="Transparent"
+               Margin="10,-100,10,10"
+               BorderColor="Transparent">
+            <StackLayout Margin="0,-40,0,0">
+                <VerticalStackLayout  Padding="20" Margin="0,10,0,0" >
+
+                    <Button Text="Agregar" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ListPorductsViewModel}}, Path=AgregarProductoCommand}"
+                                        CommandParameter="{Binding Identificador}" Margin="6" Background="#11C29F" />
+
+                    <Button Text="Regresar" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ListPorductsViewModel}}, Path=IrAListadoProductosCommand }"
+                                        CommandParameter="{Binding Identificador}" Margin="6" Background="#0C7B93" />
+                </VerticalStackLayout>
+            </StackLayout>
+        </Frame>
+
+    </Grid>
+
+</ContentPage>
